@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Traduction de la date passée par l'API en format FR long -->
+    <h2 class="text-center p-3 m-3">{{ date() | localizeddate ('full','short','locale','CET') }}</h2>
+    <div class="jumbotron container pt-3 pb-5 pl-0 pr-0">
+    <div class="col-3"></div>
+    <h3 class="offset-3 offset-md-1 pb-3 pt-3">{{ home_city}}</h3>
+    
+
+    <div class="d-flex align-content-center">
+        <h3 class="h4 text-muted col-7 col-md-3 offset-md-3">Temps</h3>
+        <p>{{ temps }}</p>
+    </div>
+
+    <div class="d-flex align-content-center">
+        <h3 class="h4 text-muted col-7 col-md-3 offset-md-3">Température</h3>
+        <p>{{ temperature }}</p>
+    </div>
+
+    <div class="d-flex align-content-center">
+        <h3 class="h4 text-muted col-7 col-md-3 offset-md-3">Vent</h3>
+        <p>{{ wind }}</p>
+    </div>
+
+{% endblock %}

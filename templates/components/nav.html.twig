@@ -1,0 +1,19 @@
+
+{% form_theme formCity 'bootstrap_4_layout.html.twig' %} 
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">    
+    <div class="navbar-collapse " id="navbarColor01">
+        {{ form_start(formCity,
+            {'attr':{'class': "form-inline col-12 offset-md-5 p-0",
+                     'id': "researchAndButton"   }}) }} 
+        <form method="post">
+            {{ form_row(formCity.city, 
+                {'attr':{'class': "offset-md-2 col-md-10 ml-2 "}}) }}
+            <button class="btn btn-primary my-2 my-sm-0" type="submit">Rechercher</button>
+            {{ form_rest(formCity) }}
+        </form>
+        {{ form_end(formCity) }}     
+    </div>
+</nav>
+
+
